@@ -1,0 +1,6 @@
+{
+  
+  "mongoURI": "mongodb+srv://cfcc:iheartCFCC!@cfcc-xjs09.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "a4f9d98ab210e11dedc093f29ff3bf9fd05a4f07021911053a",
+  "secret_key": "happy10years,CFCC!"
+}

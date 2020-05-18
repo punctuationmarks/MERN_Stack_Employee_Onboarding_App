@@ -18,7 +18,7 @@ const ProTips = ({ getProTips, proTip: { proTips, loading } }) => {
     <Spinner />
   ) : (
       <Fragment>
-        <h1 className="large text-primary text-center">Pro-Tips!</h1>
+        <h1 className="large text-blue text-center">Pro-Tips!</h1>
         <div className="marg-top-2 pad-top-2 text-center">
           <ProTipForm />
         </div>

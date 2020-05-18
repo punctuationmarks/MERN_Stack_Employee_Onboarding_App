@@ -15,7 +15,6 @@ app.use("/api/users", require("./routes/api/users"));
 app.use("/api/auth", require("./routes/api/auth"));
 app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/proTips", require("./routes/api/proTips"));
-app.use("/api/posts", require("./routes/api/posts"));
 app.use("/api/recipes", require("./routes/api/recipes"));
 app.use("/api/coffees", require("./routes/api/coffees"));
 app.use("/api/inventories", require("./routes/api/inventories"));

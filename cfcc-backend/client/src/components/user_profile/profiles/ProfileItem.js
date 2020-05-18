@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import ReactMarkdown from "react-markdown";
+
 
 const ProfileItem = ({
   profile: {
@@ -14,9 +16,15 @@ const ProfileItem = ({
     <div className="profile bg-white">
       <div>{avatar && <img src={avatar} alt="" className="round-img" />}</div>
       <div>
-        <h1 className="large">{name}</h1>
-        <p className="lead">{bio && <span>{bio}</span>}</p>
-        <p>{location && <span>From {location}</span>}</p>
+        <h2 className="medium">
+          <ReactMarkdown source={name} />
+        </h2>
+        <p className="lead">
+
+          {bio && <ReactMarkdown source={bio} />}
+
+        </p>
+        <p>{location && <span>from {location}</span>}</p>
         <Link to={`/profile/${_id}`} className="btn btn-primary">
           View Profile
         </Link>

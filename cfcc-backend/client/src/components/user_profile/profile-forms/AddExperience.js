@@ -103,8 +103,8 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <textarea
             name="description"
-            cols="30"
-            rows="5"
+            
+            
             placeholder="Job Description"
             value={description}
             onChange={e => onChange(e)}

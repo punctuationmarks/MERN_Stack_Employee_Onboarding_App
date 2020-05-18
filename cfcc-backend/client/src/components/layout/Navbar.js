@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
+// import Posts from "../forum/posts/Posts";
 
+// removed Posts
 const Navbar = ({ auth, logout }) => {
   const authLinks = (
     <ul>
@@ -13,12 +15,6 @@ const Navbar = ({ auth, logout }) => {
           <span className="hide-sm">
             Our Profiles
           </span>
-        </Link>
-      </li>
-      <li>
-        <Link to="/posts">
-          <i class="fas fa-dumpster-fire"></i>{" "}
-          <span className="hide-sm">Posts</span>
         </Link>
       </li>
       <li>
@@ -70,11 +66,11 @@ const Navbar = ({ auth, logout }) => {
 
   return (
     <nav className="navbar bg-dark">
-      <h1>
+      <h2>
         <Link to="/">
           <i className="fas fa-coffee" /> CFCC
         </Link>
-      </h1>
+      </h2>
       {!auth.loading && (
         <Fragment>{auth.isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}

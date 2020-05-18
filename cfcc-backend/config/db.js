@@ -39,7 +39,6 @@ module.exports = connectDB;
 with mongoose, there have been multiiple deprication warnings
 during the build, which is interestig. things like this:
 DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
-
 this is why there are multiiple parameters in the mongoose.connect()
 
 */

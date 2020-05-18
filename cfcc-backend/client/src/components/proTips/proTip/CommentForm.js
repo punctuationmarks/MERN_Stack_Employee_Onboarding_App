@@ -21,8 +21,6 @@ const CommentForm = ({ proTipId, addComment }) => {
       >
         <textarea
           name="text"
-          cols="30"
-          rows="5"
           placeholder="..."
           value={text}
           onChange={e => setText(e.target.value)}

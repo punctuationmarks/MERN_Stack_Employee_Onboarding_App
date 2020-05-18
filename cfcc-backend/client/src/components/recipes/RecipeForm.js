@@ -36,8 +36,8 @@ const RecipeForm = ({ addRecipe }) => {
             required
           />
           <textarea
-            cols="30"
-            rows="5"
+            
+            
             placeholder="Recipe Description"
             name="description"
             value={description}

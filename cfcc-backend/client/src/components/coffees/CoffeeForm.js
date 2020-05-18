@@ -36,8 +36,8 @@ const CoffeeForm = ({ addCoffee }) => {
             required
           />
           <textarea
-            cols="30"
-            rows="5"
+            
+            
             placeholder="Coffee Description"
             name="description"
             value={description}

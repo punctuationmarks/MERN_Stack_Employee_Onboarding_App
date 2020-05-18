@@ -1,6 +1,6 @@
 {
   "name": "CFCC_Employee_Portal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Backend for CFCC Employees",
   "main": "server.js",
   "scripts": {
@@ -10,8 +10,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "author": "puctuationmarks",
+  "author": "punctuationmarks",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "config": "^3.2.5",
     "express": "^4.17.1",

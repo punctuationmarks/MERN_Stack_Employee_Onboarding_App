@@ -7,28 +7,27 @@ import RecipeForm from "./RecipeForm";
 import { getRecipes } from "../../actions/recipe";
 
 const Recipes = ({ getRecipes, recipe: { recipes, loading } }) => {
-  useEffect(
-    () => {
+  useEffect(() => {
       getRecipes();
     },
     [getRecipes]
   );
-
+  // console.log(match.params.id);
   return loading ? (
     <Spinner />
   ) : (
-    <Fragment>
-      <h1 className="large text-blue text-center">Drink Recipes</h1>
-      <div className="container">
-        <div className="recipes">
-          {recipes.map(recipe => (
-            <RecipeItem key={recipe._id} recipe={recipe} />
-          ))}
+      <Fragment>
+        <h1 className="large text-blue text-center">Recipes</h1>
+        <div className="container">
+          <div className="recipes">
+            {recipes.map(recipe => (
+              <RecipeItem key={recipe._id} recipe={recipe} />
+            ))}
+          </div>
         </div>
-      </div>
-      <RecipeForm />
-    </Fragment>
-  );
+        <RecipeForm />
+      </Fragment>
+    );
 };
 
 Recipes.propTypes = {

@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteInventory } from "../../actions/inventory";
+import ReactMarkdown from "react-markdown";
 
 const InventoryItem = ({
   deleteInventory,
@@ -10,9 +11,11 @@ const InventoryItem = ({
   showActions
 }) => (
   <div className="inventory-item bg-white p m">
-    <p className="secondary">
-      <span className="lead">{title}</span>
-      {supplier && <span className="text-mute"> Supplier: {supplier}</span>}
+    <p className="pad-2">
+      <ReactMarkdown className="lead" source={title} />
+      {/* Only showing the supplier, if it's provided */}
+      {supplier && <span className="secondary"> <b>Supplier</b>: <ReactMarkdown className="text-mute" source={supplier} /></span>}
+      
     </p>
 
     {showActions && (

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReactMarkdown from "react-markdown";
 
 const ProfileTop = ({
   profile: {
-    company,
     location,
     bio,
     website,
@@ -14,8 +14,10 @@ const ProfileTop = ({
   return (
     <div className="profile-top bg-primary pad-2">
       <img className="round-img marg-top-1" src={avatar} alt="" />
-      <h1 className="large">{name}</h1>
-      <p className="lead">{bio && <span>{bio}</span>}</p>
+      <h2 className="medium">{name}</h2>
+      <p className="lead">
+        {bio && <ReactMarkdown source={bio}/>}
+        </p>
       <p>{location && <span>From {location}</span>}</p>
       <div className="icons marg-top-1">
         {website && (

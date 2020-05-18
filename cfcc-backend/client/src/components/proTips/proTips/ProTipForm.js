@@ -30,16 +30,14 @@ const ProTipForm = ({ addProTip }) => {
         <form className="form marg-top-1" onSubmit={e => onSubmit(e)}>
           <input
             type="text"
-            placeholder="PTT"
+            placeholder="What's your protip?"
             name="title"
             value={title}
             onChange={e => onChange(e)}
             required
           />
           <textarea
-            cols="30"
-            rows="5"
-            placeholder="What's the tip?"
+            placeholder="..."
             name="text"
             value={text}
             onChange={e => onChange(e)}

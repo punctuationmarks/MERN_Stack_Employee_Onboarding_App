@@ -11,8 +11,6 @@ import AddExperience from "../user_profile/profile-forms/AddExperience";
 import AddEducation from "../user_profile/profile-forms/AddEducation";
 import Profiles from "../user_profile/profiles/Profiles";
 import Profile from "../user_profile/profile/Profile";
-import Posts from "../forum/posts/Posts";
-import Post from "../forum/post/Post";
 import ProTips from "../proTips/proTips/ProTips";
 import ProTip from "../proTips/proTip/ProTip";
 
@@ -43,8 +41,6 @@ const Routes = () => {
         <PrivateRoute exact path="/edit-profile" component={EditProfile} />
         <PrivateRoute exact path="/add-experience" component={AddExperience} />
         <PrivateRoute exact path="/add-education" component={AddEducation} />
-        <PrivateRoute exact path="/posts" component={Posts} />
-        <PrivateRoute exact path="/posts/:id" component={Post} />
         <PrivateRoute exact path="/proTips" component={ProTips} />
         <PrivateRoute exact path="/proTips/:id" component={ProTip} />
         <PrivateRoute exact path="/inventories" component={Inventories} />

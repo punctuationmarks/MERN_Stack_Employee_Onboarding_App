@@ -27,6 +27,7 @@ const EditProfile = ({
 
   useEffect(
     () => {
+      // returns current profile then allows deconstruction
       getCurrentProfile();
 
       setFormData({
